@@ -13,13 +13,14 @@ public class PlayerInput : MonoBehaviour {
     void Update() {
         if (Input.GetButtonDown("Fire1"))
         {
-            cannon.shoot();
-            Debug.Log("book"); 
+            cannon.shoot(); 
         }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
             cannon.reload();  
         }
+
+        GetComponent<PointDasher>().dashInDirection(Input.GetAxisRaw("Horizontal")); 
 	}
 }
