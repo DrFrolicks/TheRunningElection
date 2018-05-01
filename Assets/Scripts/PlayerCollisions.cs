@@ -7,6 +7,6 @@ public class PlayerCollisions : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Lethal"))
-            ApplicationManager.instance.gameOver(); 
+            GameManager.instance.gameOver(); 
     }
 }

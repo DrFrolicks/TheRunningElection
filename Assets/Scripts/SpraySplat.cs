@@ -16,6 +16,9 @@ public class SpraySplat : MonoBehaviour {
             sProp.transform.Rotate(0, 180, 0);  
             Destroy(gameObject);
         }
-
+        if (collision.gameObject.CompareTag("PropSurface"))
+        {
+            collision.gameObject.GetComponent<PropagandaSurface>().hit();
+        }
     }
 }

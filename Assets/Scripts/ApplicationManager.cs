@@ -9,7 +9,7 @@ public class ApplicationManager : MonoBehaviour {
 
     public float ESCQuitReqHoldDuration;
 
-    public GameObject deathScreen, pauseScreen;  
+    public GameObject pauseScreen;  
 
     [HideInInspector]
     public float ESCHoldDuration; 
@@ -21,8 +21,14 @@ public class ApplicationManager : MonoBehaviour {
     {
         if (Input.GetButtonUp("Cancel"))
         {
-            togglePause();
-            ESCHoldDuration = 0;
+            if (GameManager.instance.deathScreen.activeSelf)
+            {
+                loadScene(0); //back to menu 
+            } else
+            {
+                togglePause();
+                ESCHoldDuration = 0;
+            }
         }
 
         if (Input.GetButton("Cancel"))
@@ -38,6 +44,11 @@ public class ApplicationManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
             loadScene(0);
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex != 0 && GameManager.instance.deathScreen.activeSelf && Input.GetButtonDown("Fire1"))
+        {
+            reloadCurrentScene();  
         }
     }
     private void Awake()
@@ -59,10 +70,7 @@ public class ApplicationManager : MonoBehaviour {
     {
         SceneManager.LoadScene(i); 
     }
-    public void gameOver()
-    {
-        deathScreen.SetActive(true); 
-    }
+
 
 
     public void quitGame()
