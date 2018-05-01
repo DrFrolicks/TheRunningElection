@@ -38,7 +38,6 @@ public class PointDasher : MonoBehaviour {
         }
         dashToPoint(destinationPIndex);
         canDash = false;
-        Debug.Log(canDash);  
     }
     private void OnTriggerEnter(Collider other)
     {
