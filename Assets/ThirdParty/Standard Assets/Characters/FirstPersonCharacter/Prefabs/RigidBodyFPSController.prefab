@@ -32,6 +32,7 @@ GameObject:
   - component: {fileID: 11400004}
   - component: {fileID: 114838068740176304}
   - component: {fileID: 114973899011116688}
+  - component: {fileID: 114962570780280800}
   m_Layer: 0
   m_Name: RigidBodyFPSController
   m_TagString: Player
@@ -330,6 +331,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c377427df68f364ab9414419ee21944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114962570780280800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cd238fe8b6d04f4bb0a3b53b0f7c340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114973899011116688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -346,4 +358,4 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   currentPointIndex: 1
-  dashForce: 10000
+  dashForce: 20000

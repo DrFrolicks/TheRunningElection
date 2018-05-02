@@ -8,16 +8,15 @@ public class CarSpawner : MonoBehaviour {
     public float spawnIntevalSec;
     public Transform[] lanePoints;
     public int spawnOffsetY;
-    private void Start()
-    {
-        spawnWave(); 
-    }
-    public void spawnWave()
+
+
+    public void spawnWave()    //self invoking
     {
         float randomNum = Random.value;
-        int numCars = 0; 
-        if(randomNum < twoCarChance) numCars = 2;
+        int numCars = 0;
         if (randomNum < oneCarChance) numCars = 1;
+        if (randomNum < twoCarChance) numCars = 2;
+
 
         ArrayList openPoints = new ArrayList();
         openPoints.AddRange(lanePoints);
