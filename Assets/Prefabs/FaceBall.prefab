@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 23482693402224176}
   - component: {fileID: 54210872158176812}
   - component: {fileID: 114104657275347364}
+  - component: {fileID: 114201998348144356}
+  - component: {fileID: 65599298514452864}
   m_Layer: 0
   m_Name: FaceBall
   m_TagString: Untagged
@@ -38,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1722898729735820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.15, y: 2.4, z: 1.96}
+  m_LocalPosition: {x: 12.9999275, y: 49.898438, z: 85.2413}
   m_LocalScale: {x: 0.38854492, y: 0.38854492, z: 0.38854492}
   m_Children: []
   m_Father: {fileID: 0}
@@ -99,7 +101,19 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
+--- !u!65 &65599298514452864
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1722898729735820}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114104657275347364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,6 +126,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spray: {fileID: 1543250862265544, guid: 9c6c5e5a5b9f0b64fbd1dcb795abf3e0, type: 2}
+--- !u!114 &114201998348144356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1722898729735820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 430a7fe978c644541825d211e5bd8454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPlayerDistance: 100
+  playerTransform: {fileID: 0}
 --- !u!135 &135226863712079220
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -120,7 +147,7 @@ SphereCollider:
   m_GameObject: {fileID: 1722898729735820}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}

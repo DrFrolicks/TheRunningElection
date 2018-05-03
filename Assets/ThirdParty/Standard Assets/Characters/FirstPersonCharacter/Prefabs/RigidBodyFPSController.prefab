@@ -85,7 +85,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 500
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -315,9 +315,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1722898729735820, guid: 6bfa301730a319447a236f7ef5e41b80, type: 2}
-  shootForce: 1000
-  clipCapacity: 3
-  shootCooldown: 1
+  shootForce: 2000
+  clipCapacity: 99999999
+  shootCooldown: 0.5
   reloadSeconds: 1
   infiniteAmmo: 1
 --- !u!114 &114838068740176304

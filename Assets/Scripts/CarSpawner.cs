@@ -9,7 +9,10 @@ public class CarSpawner : MonoBehaviour {
     public Transform[] lanePoints;
     public int spawnOffsetY;
 
-
+    private void Start()
+    {
+        spawnWave(); 
+    }
     public void spawnWave()    //self invoking
     {
         float randomNum = Random.value;

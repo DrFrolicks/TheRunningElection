@@ -19,7 +19,6 @@ public class PropagandaSurface : MonoBehaviour {
         GameManager.instance.addVotes(votesAwarded);
         particleSystem.Play();
         hasPropaganda = true;
-        Debug.Log("hit"); 
     } 
     
     

@@ -13,7 +13,8 @@ public class SpraySplat : MonoBehaviour {
             Vector3 collisionNormal = collision.contacts[0].normal;
             Transform sProp = Instantiate(spray, collision.contacts[0].point + collisionNormal * 0.1f, Quaternion.identity).transform; 
             sProp.transform.up = collisionNormal;
-            sProp.transform.Rotate(0, 180, 0);  
+            sProp.transform.Rotate(0, 180, 0);
+            sProp.transform.parent = collision.transform; 
             Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag("PropSurface"))
