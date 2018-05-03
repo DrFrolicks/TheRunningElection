@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1722898729735820, guid: 6bfa301730a319447a236f7ef5e41b80, type: 2}
-  shootForce: 2000
+  shootForce: 2500
   clipCapacity: 99999999
   shootCooldown: 0.5
   reloadSeconds: 1

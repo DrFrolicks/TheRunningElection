@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33600802080263464}
   - component: {fileID: 64812504576889428}
   - component: {fileID: 23545390597825098}
+  - component: {fileID: 114497602305756420}
   m_Layer: 0
   m_Name: Propaganda
   m_TagString: Untagged
@@ -97,3 +98,17 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114497602305756420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1543250862265544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74ac328307ed90443b1d40d4f1f5e03a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: 3a42959bc9961074caf4043535d9e496, type: 2}
+  - {fileID: 2100000, guid: dfc9e4c820120fb4e95dc69de37ed09e, type: 2}
