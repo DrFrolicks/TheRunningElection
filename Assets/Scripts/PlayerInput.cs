@@ -11,6 +11,7 @@ public class PlayerInput : MonoBehaviour {
         cannon = GetComponentInChildren<Cannon>(); 
     }
     void Update() {
+        if (ApplicationManager.instance.gameIsPaused) return;
         if (Input.GetButtonDown("Fire1"))
         {
             cannon.shoot(); 

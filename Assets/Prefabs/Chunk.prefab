@@ -53596,7 +53596,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1102781138235188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 378}
+  m_LocalPosition: {x: 0, y: 0, z: 377}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4780063143299512}
@@ -130359,6 +130359,7 @@ MonoBehaviour:
   maxPlayerDistance: 600
   playerTransform: {fileID: 4388823661184570, guid: 362d9182714e58d44a26397205b46c70,
     type: 2}
+  destroyWhenBehindPlayer: 0
 --- !u!114 &114541251474207352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130372,7 +130373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnedObject: {fileID: 1238028452762820, guid: 0a00f23701932d846948500abae82257,
     type: 2}
-  numObjects: 3
+  numObjects: 2
   spawnChance: 0.3
   randomizeRotation: 0
 --- !u!114 &114677018118574758
@@ -130388,6 +130389,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnedObject: {fileID: 1238028452762820, guid: 0a00f23701932d846948500abae82257,
     type: 2}
-  numObjects: 3
+  numObjects: 2
   spawnChance: 0.3
   randomizeRotation: 0

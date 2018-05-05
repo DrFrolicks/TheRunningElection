@@ -128,8 +128,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void Update()
         {
+            if (ApplicationManager.instance.gameIsPaused) return;
             RotateView();
-
+            lockedRotation(); 
             if (CrossPlatformInputManager.GetButtonDown("Jump") && !m_Jump)
             {
                 m_Jump = true;
@@ -260,6 +261,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_Jumping = false;
             }
+        }
+        private float rotationY = 0f;
+        private float sensitivityY = 2f;
+        public float yRotateLimit; 
+        void lockedRotation()
+        {
+            rotationY += Input.GetAxis("Mouse X") * sensitivityY;
+            rotationY = Mathf.Clamp(rotationY, -70, 70);
+
+            transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, rotationY, transform.localEulerAngles.z);
         }
     }
 }

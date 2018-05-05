@@ -247,6 +247,7 @@ MonoBehaviour:
   materials:
   - {fileID: 2100000, guid: 3a42959bc9961074caf4043535d9e496, type: 2}
   - {fileID: 2100000, guid: dfc9e4c820120fb4e95dc69de37ed09e, type: 2}
+  - {fileID: 2100000, guid: 310852c70660a6046a620f15188848c2, type: 2}
 --- !u!198 &198286140113047724
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -307,7 +308,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1968259001
+  randomSeed: 1016921040
   InitialModule:
     serializedVersion: 3
     enabled: 1

@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
     public int votes, votesToWin;
     public GameObject deathScreen;
 
-    public UnityEvent OnVoteGained, OnGameOver;  
+    public UnityEvent OnVoteGained, OnGameOver, OnWin;  
 
     private void Awake()
     {
@@ -20,12 +20,18 @@ public class GameManager : MonoBehaviour {
     public void addVotes(int thousandVotes)
     {
         votes += thousandVotes;
-        OnVoteGained.Invoke();  
+        OnVoteGained.Invoke();
+        if (votes == votesToWin)
+        {
+            OnWin.Invoke();
+        }
+
     }
 
     public void gameOver()
     {
         deathScreen.SetActive(true);
+        OnGameOver.Invoke(); 
     }
 
     public void processDeath()

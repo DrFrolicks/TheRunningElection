@@ -9,5 +9,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: aaf2fa5edcaf3154482d74ed08a64981
   - enabled: 1
-    path: Assets/Scenes/FacegunTest.unity
+    path: Assets/Scenes/Gameplay.unity
     guid: 42fc3403e67498e46808d13bea9b90b6
