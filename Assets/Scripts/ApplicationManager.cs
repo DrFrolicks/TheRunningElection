@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;  
+using UnityEngine.SceneManagement;
+using UnityEditor; 
 
 public class ApplicationManager : MonoBehaviour {
     public static ApplicationManager instance;
@@ -26,7 +27,7 @@ public class ApplicationManager : MonoBehaviour {
                 loadScene(0); //back to menu 
             } else
             {
-                togglePause();
+                //togglePause();
                 ESCHoldDuration = 0;
             }
         }
@@ -38,8 +39,6 @@ public class ApplicationManager : MonoBehaviour {
             {
                 Application.Quit();
             }
-
-
         }
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
@@ -50,14 +49,37 @@ public class ApplicationManager : MonoBehaviour {
         {
             reloadCurrentScene();  
         }
+
+        if (!mouseOnScreen() && !Paused)
+            Paused = true;
+        if (mouseOnScreen() && Paused)
+            Paused = false;  
     }
-    private void Awake()
+
+    public bool mouseOnScreen()
+    {
+#if UNITY_EDITOR
+        if (Input.mousePosition.x == 0 || Input.mousePosition.y == 0 || Input.mousePosition.x >= Handles.GetMainGameViewSize().x - 1 || Input.mousePosition.y >= Handles.GetMainGameViewSize().y - 1)
+        {
+            return false;
+        }
+#else
+        if (Input.mousePosition.x == 0 || Input.mousePosition.y == 0 || Input.mousePosition.x >= Screen.width - 1 || Input.mousePosition.y >= Screen.height - 1) {
+        return false;
+        }
+#endif
+        else
+        {
+            return true;
+        }
+    }
+        private void Awake()
     {
         if (instance == null)
             instance = this;
     }
 
-    public void togglePause()
+        public void togglePause()
     {
         Paused = !Paused;
     }
